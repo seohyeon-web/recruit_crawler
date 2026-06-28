@@ -275,7 +275,7 @@ class SaraminCrawler:
             return
         
         # 이메일 내용 생성
-        subject = f"🔔 새 채용공고 {len(jobs)}개 발견! - {datetime.now().strftime('%m/%d')}"
+        subject = f"🔔 새 마케팅 채용공고 {len(jobs)}개 발견! - {datetime.now().strftime('%m/%d')}"
         
         # HTML 템플릿
         html_body = f"""
@@ -298,7 +298,7 @@ class SaraminCrawler:
             </head>
             <body>
                 <div class="header">
-                    <h1>🎯 채용공고 자동 수집 결과</h1>
+                    <h1>🎯 마케팅 채용공고 자동 수집 결과</h1>
                     <p>{datetime.now().strftime('%Y년 %m월 %d일')} 수집 완료</p>
                 </div>
                 
@@ -440,7 +440,7 @@ if __name__ == "__main__":
 
     # # 예시 1: 이곳에 내가 검색하고 싶은 채용 공고 조건 넣기!! (한번에 3가지까지만 가능)
     # jobs = crawler.search_jobs(
-    #     keyword="병원 데이터",
+    #     keyword="마케팅",
     #     salary_min="3000만원~",           # 3000만원 이상
     #     company_types=["대기업", "중견기업"],   # 대기업, 중견기업만
     #     job_types=["정규직"],              # 정규직만
