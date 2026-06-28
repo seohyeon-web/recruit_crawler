@@ -393,29 +393,14 @@ class SaraminCrawler:
         print("🚀 크롤링 시작!")
 
         # 다양한 검색 조건들
-        search_configs = [
-            {
-                'name': '병원 데이터 고연봉 정규직',
-                'keyword': '병원 데이터',
-                'salary_min': '3000만원~',
-                'company_types': ['대기업', '중견기업'],
-                'job_types': ['정규직'],
-            },
-            {
-                'name': '스타트업 PM 재택근무',
-                'keyword': 'PM',
-                'company_types': ['스타트업'],
-                'job_types': ['정규직', '계약직'],
-                'remote_work': True,
-                'work_day': ['유연근무제']
-            },
-            {
-                'name': '헬스케어 기획직',
-                'keyword': '헬스케어',
-                'job_types': ['정규직'],
-                'exclude_keywords': ['학교'],
-            }
-        ]
+  search_configs = [
+    {
+        'name': '마케팅 신입 (정규직/계약직)',
+        'keyword': '마케팅',
+        'job_types': ['정규직', '계약직'],
+        'remote_work': True,
+    }
+]
 
         all_jobs = []
 
