@@ -388,19 +388,19 @@ class SaraminCrawler:
         stats = [f"{k}({v}개)" for k, v in keyword_counts.items()]
         return ", ".join(stats)
 
-    def run_advanced_crawler(self, email_config=None):
+def run_advanced_crawler(self, email_config=None):
         """여러가지 필터들을 활용한 크롤링"""
         print("🚀 크롤링 시작!")
 
         # 다양한 검색 조건들
-  search_configs = [
-    {
-        'name': '마케팅 신입 (정규직/계약직)',
-        'keyword': '마케팅',
-        'job_types': ['정규직', '계약직'],
-        'remote_work': True,
-    }
-]
+        search_configs = [     # ← 여기! 들여쓰기 맞춤
+            {
+                'name': '마케팅 신입 (정규직/계약직)',
+                'keyword': '마케팅',
+                'job_types': ['정규직', '계약직'],
+                'remote_work': True,
+            }
+        ]
 
         all_jobs = []
 
